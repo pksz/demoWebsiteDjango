@@ -5,7 +5,8 @@ from django.urls import reverse
 class Products(models.Model):
     #Fields
     #TO-DO-> product name and description should be separate
-    product_name = models.CharField(max_length=20, help_text='Product Description')
+    product_name = models.CharField(max_length=20, help_text='Product Name')
+    product_description=models.CharField(max_length=200,help_text='Product Description',null=True)
     product_image=models.ImageField(null=True)
     help_text="Add or remove a product"
     # …

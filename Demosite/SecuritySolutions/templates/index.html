@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends "base_generic.html" %}
+<html lang="en">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    {% load static %}
+    <img
+    src="{% static 'SecuritySolutions/images/goat.jpg' %}"
+    alt="A goat"
+    style="width:555px;height:540px;" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Secure Your Home</title>
+    {% endblock %}
+</head>
+<body>
+    {%block content%}
+    <h1>Welcome to Security solutions.We have everything you need to secure your home.</h1>
+    <em>desigend by pks</em>
+    <ul>
+        <li><strong>Products:</strong> {{ product }}</li>
+        <li><strong>Product description:</strong> {{ product_description }}</li>
+        <!--<li><strong>Product_image</strong></li>!-->
+      </ul>
+
+    {% endblock %}
+</body>
+</html>
